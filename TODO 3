@@ -1,0 +1,9 @@
+for (int i = currentLevel; i >= 0; i--) {
+
+    while (cur.forward[i] != null &&
+           cur.forward[i].score < score) {
+        cur = cur.forward[i];
+    }
+
+    update[i] = cur;
+}
